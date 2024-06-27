@@ -1,6 +1,16 @@
 # Portfolio
 Different challenges
 
+## Painter Classification
+This is a technical assignment from Art Recognition (ArtTech startup). The task was to reconstruct the model described in the given article, collect data, repeat the experiment and propose improvements to the model.
+
+The article describes the new approach in solving the problem of painting classification and its advantages over previous state-of-the-art approach. This advantage consists in replacing manual feature extraction for the model with automatic. The authors suggest using an autoencoder, a neural network built on convolution layers, which, by self-learning to restore images after convolution, finds the most important signs distinguishing the style/manner of one artist from another, which is the basis for the authentication of an artwork. After the autoencoder has learned to restore images, the head of the classifier is put in place of the decoder, which in turn is no longer trained from scratch, but on the weights of the autoencoder (transfer learning).
+
+There're 2 notebooks created for different steps of project:
+1. IMAGES_DATA for collecting paintings from the wikiart (using wikiart API);
+2. CAE_CNN for models and their modifications.
+
+
 ## Credit scoring
 - target variable (**default**) is binary
 - sampling is **unbalanced**
